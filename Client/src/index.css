@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #4A90E2; /* Customize color */
+    width: 35px; /* Customize size */
+    height: 35px; /* Customize size */
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above all other content */
+  }
+  
+  /* Spinner */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db; /* Change this to your preferred color */
+  border-radius: 50%;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Table Styling */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e2e8f0; /* Tailwind's border-gray-200 */
+}
+
+.table th {
+  background-color: #f7fafc; /* Tailwind's bg-gray-100 */
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 4px;
+  pointer-events: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Ensures tooltip appears above other elements */
+}
+
+/* Additional Styling (Optional) */
+.container {
+  max-width: 1200px; /* Limit max width of container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add horizontal padding */
+}
+
+
+/* CountryOperatorManagement.css */
+
+.country-operator-management {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+.add-pair {
+  margin-bottom: 16px;
+}
+
+.add-pair input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 150px;
+}
+
+.add-pair button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-pair button:hover {
+  background-color: #0056b3;
+}
+
+.font-semibold {
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.text-red-500 {
+  color: #dc3545;
+}
+
+.text-yellow-500 {
+  color: #ffc107;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.text-yellow-500:hover {
+  color: #e0a800;
+}
+
+
+/* ProgramControl.css */
+
+.program-control {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px; /* Padding around the component */
+  border: 1px solid #dee2e6; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+  color: #333; /* Dark gray color for the title */
+  margin-bottom: 16px; /* Space below the title */
+}
+
+.status {
+  font-size: 1.1em; /* Slightly larger text for status */
+  margin-bottom: 16px; /* Space below the status */
+}
+
+.buttons {
+  display: flex; /* Use flexbox for button layout */
+  gap: 10px; /* Space between buttons */
+}
+
+button {
+  padding: 10px 20px; /* Padding inside buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button:disabled {
+  opacity: 0.6; /* Dim disabled buttons */
+  cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+}
+
+.bg-green-500 {
+  background-color: #28a745; /* Green color for start button */
+}
+
+.bg-green-500:hover:not(:disabled) {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.bg-red-500 {
+  background-color: #dc3545; /* Red color for stop button */
+}
+
+.bg-red-500:hover:not(:disabled) {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.bg-yellow-500 {
+  background-color: #ffc107; /* Yellow color for restart button */
+}
+
+.bg-yellow-500:hover:not(:disabled) {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.font-semibold {
+  font-weight: 600; /* Semi-bold text */
+}

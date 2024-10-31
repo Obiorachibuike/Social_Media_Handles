@@ -1,0 +1,134 @@
+/* Header styling */
+header {
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-bar {
+  background: #0954e0;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.language-selector select {
+  border: none;
+  background: #fff;
+  padding: 5px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.navigation a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0954e0;
+}
+
+.user-actions a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0954e0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #0954e0;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+.cartCounter,
+.wishListCounter {
+  position: absolute;
+  top: -15px;
+  right: -14px;
+  background: #0954e0;
+  width: 19px;
+  text-align: center;
+  color: white;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.headerCart,
+.wishlist {
+  position: relative;
+}
+.user-profile {
+  width: 50px;
+}
+.dropdown_button {
+  transform: rotate(90deg);
+  width: 15px;
+  font-size: 23px;
+  opacity: 0.7;
+}
+.user-account-content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 70px;
+}
+.dropdown-menu-cont {
+  background: white;
+  padding: 30px;
+  position: absolute;
+  width: 250px;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  top: 35px;
+  right: 0px;
+}
+.user-account-content{
+  height: 35px;
+  position: relative;
+}
+
+.user-account-content:hover
+ .dropdown-menu-cont{
+  display: flex;
+}

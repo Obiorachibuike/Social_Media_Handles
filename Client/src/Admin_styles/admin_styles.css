@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0; 
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-side-cont{
+    width: 20%;
+    border-right: 2px solid chocolate;
+    padding: 0px 5px;
+  }
+  .nav{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    
+    margin-left: 5px;
+    font-size: 25px;
+    height: 574px;
+    margin-top: 31px;
+  }
+  .nav a{
+    padding: 20px;
+    color: black;
+  }
+  
+  .nav a:hover{
+    background-color: chocolate;
+    
+    color: white;
+  }
+  .student-cont{
+    display: flex;
+    width: 80%;
+   
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .right-side-cont{
+    width: 95%;
+    padding: 10px 20px;
+    overflow: auto;
+  }
+  
+  .student-cont input{
+    width: 80%;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid chocolate;
+  }
+  .student-cont input::placeholder{
+    color: chocolate;
+  }
+  
+  button{
+    padding: 10px 20px;
+    font-size: 17px;
+    width: 100px;
+    font-weight: 530;
+    border: 2px solid chocolate;
+    background-color: white;
+    border-radius: 20px;
+  }
+  button:hover{
+    color: white;
+    background-color: chocolate;
+  }
+  
