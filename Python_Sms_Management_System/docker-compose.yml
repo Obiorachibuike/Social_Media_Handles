@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Map host port 5000 to container port 5000
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}  # Pass JWT secret key from environment
+      - DATABASE_URL=${DATABASE_URL}        # Pass database URL from environment
+      - MONGO_URI=${MONGO_URI}              # Pass MongoDB URI from environment
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}  # Pass Telegram bot token from environment
+      - CHAT_ID=${CHAT_ID}                  # Pass chat ID for Telegram notifications
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    depends_on:
+      - mongo  # Ensure MongoDB is started before the app
+      
+  mongo:
+    image: mongo:latest  # Use the official MongoDB image
+    ports:
+      - "27017:27017"  # Map host port 27017 to container port 27017
+    volumes:
+      - mongo_data:/data/db  # Persist MongoDB data
+
+volumes:
+  mongo_data:
